@@ -29,3 +29,12 @@ void print_string(char* string){
 	asm { nop }
 
 }
+
+
+char *get_os_version(){
+	enable_syscalls();
+	*(unsigned char *)$D643 = $03;
+	asm {nop}
+	char[256] os_version_return = (char *)$0300;
+	return os_version_return;
+}
