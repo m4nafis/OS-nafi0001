@@ -15,7 +15,7 @@ void call_syscall01(){
 	asm { nop }
 }
 
-void print_string(char *string){
+void print_string(char* string){
 	unsigned char *p = $0300;
 	while (p<=$03FF){
 	*p = *string;
