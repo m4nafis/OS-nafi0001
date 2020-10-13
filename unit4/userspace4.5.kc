@@ -1,0 +1,9 @@
+import "myabi"
+
+void main()
+{
+print_string("os version: ");
+char* version = get_os_version();
+print_string(version);
+
+}
