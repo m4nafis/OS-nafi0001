@@ -251,7 +251,7 @@ p->storage_end_address = $31FFF + (((unsigned dword)pdb_number)*$2000);
   Hypervisor saved state registers in Appendix D of the MEGA65 User's
   Guide.*/
 
-*(unsigned short *)&ss[7] = $080D;
+*(unsigned short *)&ss[7] = $08000;
 
   return;
 }
