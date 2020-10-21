@@ -241,7 +241,7 @@ p->storage_end_address = $31FFF + (((unsigned dword)pdb_number)*$2000);
   XXX - Note that the MEGA65 User's Guide has been updated on FLO.
   You will required the latest version, as otherwise SPL is not listed.*/
   
- *(unsigned short *)&ss[4] = $01FF;
+ *(unsigned short *)&ss[5] = $01FF;
 
   /*XXX - Set the program counter to $080D
   (This requires a bit of fiddly pointer arithmetic, so to save you 
@@ -251,7 +251,7 @@ p->storage_end_address = $31FFF + (((unsigned dword)pdb_number)*$2000);
   Hypervisor saved state registers in Appendix D of the MEGA65 User's
   Guide.*/
 
-*(unsigned short *)&ss[7] = $080D;
+*(unsigned short *)&ss[8] = $080D;
 
   return;
 }
